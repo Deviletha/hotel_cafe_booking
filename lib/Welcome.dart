@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Login_option.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -55,7 +56,8 @@ class _WelcomeState extends State<Welcome> {
             child: SizedBox(
                 width: 300,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () { Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => loginpagee())); },
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Color(0xff004d40)),

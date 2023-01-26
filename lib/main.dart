@@ -2,6 +2,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'Login_option.dart';
+import 'Welcome.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,7 +21,7 @@ class _SplashScreenState extends State {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => loginpagee()));
+          context, MaterialPageRoute(builder: (context) => Welcome()));
     });
   }
 
