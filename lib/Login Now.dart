@@ -114,11 +114,15 @@ class _loginnowState extends State<loginnow> {
                 child: Text("Login to my Account",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.white)),
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue[800],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
+                style: ButtonStyle(
+                  backgroundColor:
+                  MaterialStateProperty.all(Color(0xff004d40)),
+                ),
+                // style: ElevatedButton.styleFrom(
+                //     backgroundColor: Colors.blue[800],
+                //     shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.circular(10),
+                //     )),
               ),
             ),
           ),

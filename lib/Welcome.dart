@@ -52,9 +52,10 @@ class _WelcomeState extends State<Welcome> {
                 "We will help you to find best Cafe near you & \n best Hotel rooms for your trip"),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 60),
+            padding: const EdgeInsets.only(top: 60,left: 20,right: 20),
             child: SizedBox(
-                width: 300,
+                width: 450,
+                height: 50,
                 child: ElevatedButton(
                     onPressed: () { Navigator.push(context,
                         MaterialPageRoute(builder: (context) => loginpagee())); },

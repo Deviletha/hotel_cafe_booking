@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Login Now.dart';
+import 'Login_Facebook.dart';
 
 class loginpagee extends StatefulWidget {
+  const loginpagee({super.key});
+
   @override
   State<loginpagee> createState() => _loginpageeState();
 }
@@ -12,7 +15,7 @@ class _loginpageeState extends State<loginpagee> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        elevation: 1,
+        elevation: 0,
         title: Center(
           child: Text(
             "Login For Best Services ",
@@ -43,7 +46,7 @@ class _loginpageeState extends State<loginpagee> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blueGrey[200],
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(5),
                     )),
               ),
             ),
@@ -55,7 +58,8 @@ class _loginpageeState extends State<loginpagee> {
               width: 450,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () { Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Facebook_Login())); },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -71,11 +75,15 @@ class _loginpageeState extends State<loginpagee> {
                             fontWeight: FontWeight.bold, color: Colors.white)),
                   ],
                 ),
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue[800],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
+                style: ButtonStyle(
+                  backgroundColor:
+                  MaterialStateProperty.all(Color(0xff004d40)),
+                ),
+                // style: ElevatedButton.styleFrom(
+                //     backgroundColor: Colors.blue[800],
+                //     shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.circular(10),
+                //     )),
               ),
             ),
           ),
